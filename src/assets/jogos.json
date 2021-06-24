@@ -1,10 +1,10 @@
 {
    "data": [
        {
-        "data_de_lançamento": "1 Nov, 2000",
-        "descrição": "Experimenta o jogo de ação online número 1 do mundo. Entra numa guerra de terroristas incrivelmente realista neste popular jogo com base no trabalho de equipa. Junta-te aos teus colegas de equipa para completar missões estratégicas. Elimina as instalações do inimigo. Salva reféns. O teu papel afeta o sucesso da tua equipa. O sucesso da tua equipa afeta o teu papel.",
-        "imagem": "https://4.bp.blogspot.com/-HChV4KpX2TE/UaApYp29x2I/AAAAAAAABVU/0S3fe_RBQ2g/s1600/Counter_Strike_bg_original1.jpg_dicas.jpg",
-        "nome_jogo": "Counter Strike",
+        "data_de_lançamento": "21/08/2012",
+        "descrição": "Counter-Strike: Global Offensive (CS: GO) expande a jogabilidade de ação baseada em equipas que foi pioneira quando lançada há 12 anos atrás. O CS: GO apresenta-se com novos mapas, personagens, armas e ainda oferece versões atualizadas de conteúdo do CS clássico (de_dust2, etc.). Para além disso, o CS: GO introduz novos modos de jogo, partidas rápidas através de matchmaking, tabelas de classificação e muito mais. O Counter-Strike surpreendeu a indústria de jogos quando o improvável mod se tornou no jogo para PC de ação online mais jogado do mundo quase imediatamente depois de ter sido lançado em Agosto de 1999, disse Doug Lombardi da Valve. Durante os últimos 12 anos, continuou a ser um dos jogos mais jogados do mundo, uma manchete em torneios de jogos competitivos que vendeu mais 25 milhões de unidades por todo o mundo. O CS: GO promete expandir a jogabilidade do galardoado CS e trazê-la para os que jogam no PC, nas consolas da geração mais recente ou no Mac.",
+        "imagem": "https://th.bing.com/th/id/R13aa5bc8728a72a8f73b9d6eb18e8e8d?rik=JYTnoobnIU6u3Q&pid=ImgRaw",
+        "nome_jogo": "Counter Strike: Global Offinsive",
         "score": "Extremamente positivas"
        },
        {
@@ -15,11 +15,20 @@
         "score": "Extremamente positivas"
        },
        {
-           "data_de_lançamento":"19 dec 2020",
-           "descrição": "Bom dia",
+           "data_de_lançamento":"19 dec 2000",
+           "descrição": "Assassin's Creed é uma série de jogos eletrônicos. A premissa central da história envolve-se a partir da rivalidade entre duas sociedades secretas ancestrais: os Assassinos, que desejam a paz através do livre arbítrio, e os Templários, que têm o objetivo de dominar o mundo e impor a ordem na humanidade. Ambos tiveram uma relação indireta com uma espécie que viveu antes dos humanos, cuja sociedade foi destruída por uma gigantesca tempestade solar. Misturando personagens e ficção histórica com eventos e figuras reais, a ordem cronológica dos jogos começa em 2012, e fala de Desmond Miles, um jovem que com a ajuda do Animus, explora as memórias de alguns dos mais proeminentes Assassinos da história.",
            "imagem":"https://images2.alphacoders.com/602/602604.jpg",
            "nome_jogo":"Assassins Creed",
            "score":"Very good"
+       },
+       {
+        "data_de_lançamento":"20  março 2018",
+        "descrição": "Sea of Thieves é um jogo eletrônico de ação-aventura produzido pela Rare e publicado pela Xbox Game Studios exclusivamente para Xbox One e Windows 10, sendo lançado em 20 de março de 2018. O jogo contem elementos de jogabilidade na primeira pessoa[5] e utiliza conteúdo gerado pelos usuários, em que os jogadores tem a possibilidade de criar as suas próprias historias usando as ferramentas disponibilizadas pelo jogo. Num cenário de piratas, em Sea of Thieves os jogadores podem jogar cooperativamente num ambiente multijogador em mundo aberto.",
+        "imagem":"https://as.com/meristation/imagenes/2019/11/26/noticias/1574749817_053077_1574749898_noticia_normal.jpg",
+        "nome_jogo":"Sea Of Thieves",
+        "score":"Very good"
        }
+
+       
 ]
 }

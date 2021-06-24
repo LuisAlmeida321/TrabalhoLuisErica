@@ -52,6 +52,7 @@ export default {
   color: black;
 }
 .carousel{
+  padding: 50px;
   background-color: black;
 }
 
