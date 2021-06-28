@@ -1,12 +1,10 @@
 <template>
+<div class="base">
 <div class="flex_container" style="align:center">
   
    <v-container class="altura">
     <v-layout row class="text-xs-center" style="align:center; padding-left:25%">
-      <!-- <v-flex xs3 style="background-image: url('http://cdn.wallpapersafari.com/7/86/gqiGH7.jpg')">
-        <v-card height="500px"></v-card>
-      </v-flex> -->
-      <v-flex xs8 class="orange">
+      <v-flex xs8>
         <v-container >
           <v-card flat>
             <v-card-title primary-title>
@@ -26,12 +24,11 @@
   </v-container>
 
 </div>
-
+</div>
 </template>
 
 <script>
 import firebase from 'firebase';
-
 export default ({
     data() {
       return {
@@ -46,7 +43,7 @@ export default ({
                 // Signed in
                 var user = userCredential.user;
                 console.log(user);
-                this.$router.push('/Produto');
+                this.$router.push('/Home');
                 // ...
             })
             .catch((error) => {
@@ -67,6 +64,8 @@ export default ({
     padding-bottom: 5%;
     align-content: center;
   }
- 
+.base{
+  background-color: black;
+}
  </style>
 

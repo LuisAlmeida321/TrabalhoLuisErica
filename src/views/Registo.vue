@@ -1,14 +1,10 @@
 <template>
+<div class="base">
 <div class="flex_container" style="align:center">
-  <v-parallax
-      src="https://wallpapercave.com/wp/c3L7Ldg.jpg"
-  >
+
    <v-container class="altura">
     <v-layout row class="text-xs-center" style="align:center; padding-left:25%">
-      <!-- <v-flex xs3 style="background-image: url('http://cdn.wallpapersafari.com/7/86/gqiGH7.jpg')">
-        <v-card height="500px"></v-card>
-      </v-flex> -->
-      <v-flex xs8 class="orange">
+      <v-flex xs8>
         <v-container >
           <v-card flat>
             <v-card-title primary-title>
@@ -26,9 +22,8 @@
       </v-flex>
     </v-layout>
   </v-container>
-  </v-parallax>
 </div>
-
+</div>
 </template>
 
 <script>
@@ -61,5 +56,7 @@ export default ({
 })
 </script>
 <style>
-
+.base{
+  background-color: black;
+}
 </style>

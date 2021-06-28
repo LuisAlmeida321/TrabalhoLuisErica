@@ -18,10 +18,10 @@
           <v-list-item>
             <v-button>
               <router-link to="/Jogos">
-                 <v-btn depressed elevation="24" large outlined plain raised rounded x-large>Lista dos Jogo</v-btn>
+                 <v-btn depressed elevation="24" large outlined plain raised rounded x-large>Jogo</v-btn>
               </router-link>
             </v-button>
-            </v-list-item>
+          </v-list-item> 
             <v-list-item>
             <v-button>
               <router-link to="/About" >
@@ -30,13 +30,7 @@
             </v-button>
             </v-list-item>
 
-          <v-list-item>
-            <v-button>
-              <router-link to="/Generos" >
-                <v-btn depressed elevation="24" large outlined plain raised rounded x-large>Generos</v-btn>
-              </router-link>
-            </v-button>
-          </v-list-item>
+          
           <v-list-item>
             <v-button>
               <router-link to="/Teste" >
@@ -45,7 +39,6 @@
             </v-button>
           </v-list-item>
       <v-spacer></v-spacer>
-
       <v-app-bar-nav-icon>
         <router-link to="/Login"> 
           <span class="material-icons">
@@ -53,7 +46,6 @@
           </span>
         </router-link>  
       </v-app-bar-nav-icon>
-      
       <v-app-bar-nav-icon>
         <router-link to="/Registo">
           <span class="material-icons">
@@ -84,7 +76,7 @@
       </v-card-title>
  
       <v-card-text class="py-2 white--text text-center">
-        {{ new Date().getFullYear() }} --- <strong>Projeto de Front-end, UMa</strong>
+        {{ new Date().getFullYear() }} --- <strong>Projeto de Front-end, UMA</strong>
       </v-card-text>
     </v-card>
   </v-footer>   

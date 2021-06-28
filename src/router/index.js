@@ -44,11 +44,6 @@ const routes = [
   },
 
   {
-    path: '/Generos',
-    name: 'Generos',
-    component: () => import('../views/Generos.vue')
-  },
-  {
     path:'/Admin',
     name: 'Admin',
     // component: Admin,

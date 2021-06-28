@@ -1,4 +1,5 @@
 <template>
+<div>
   <v-carousel
     cycle
     height="90%"
@@ -6,6 +7,7 @@
     show-arrows-on-hover
     class="carousel"
   >
+  <h1 class="letras">Bem-vindos</h1>
     <v-carousel-item
       v-for="(slide, i) in slides"
       :key="i"
@@ -19,6 +21,8 @@
         </v-row>
     </v-carousel-item>
   </v-carousel>
+  
+  </div>
 </template>
 
 <script>
@@ -49,7 +53,8 @@ export default {
 
 <style>
 .letras{
-  color: black;
+  color: white;
+  text-align: center;
 }
 .carousel{
   padding: 50px;

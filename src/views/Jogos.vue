@@ -1,154 +1,58 @@
 <template>
-<div>
-  <v-container class="container" style="padding-top:80px">
-      <input type="text" v-model="artista" v-on:keyup.enter="carregaPesquisa(artista)">
-      <v-btn color="orange accent-2" @click="carregaPesquisa(artista)"> Pesquisa </v-btn>
-      <h></h>
-      <v-btn
-      ref="button"
-      color="error"
-      class="mr-4"
-      @click="reset">
-      Reset Form
-    </v-btn>
-      
-      <div v-if="artista!=null && limpa == false">  <!-- null && limpa == false-->
- 
-        <h4>Artista Procurado: {{artista}}</h4>
- 
-     
-        <v-img height="350" :src="url_imagem"></v-img>
-        
-        <h4>Género Musical: </h4>
-        <div v-for="(item,index) in listaartista" :key="index">
-          {{item.name}}
-        </div>
-       </div>
-       
-      <div >
-      <v-card-actions v-if="apareceFav">
-        <v-btn color="pink" text @click="favorito(item)">
-          Favorito
-          </v-btn>
-      </v-card-actions>
-      </div>
-      <div class="colfav">
-        <div v-if="favoritos.length >0">
-          <h3>
-            Favoritos
-          </h3>
-          <div v-for="(fav, index) in favoritos" :key="index">
-            {{fav}} <v-icon x-small @click="remofav(index)">mdi-close-circle-outline</v-icon>
-          </div>
-        </div>
-      </div>
-      <hr /><br>
- 
-    <div v-if="artista == null">
-      <div v-for="(item, index) in info" :key="index">
-        <ul>
-          <h3>{{item.headline}}</h3>
-          <p>{{item.kicker}}</p>
-        </ul>
- 
-      </div>
-    </div>
- 
-  </v-container>
-</div>
-</template>
- 
-<script>
-import axios from "axios";
- 
-export default {
-  //props: ["id"],
-  data() {
-    return {
-      info: null,
-      favoritos: [],
-      snackbar: false,
-      imagem: null,
-      listaartista: null,
-      url: null,
-      url_imagem: null,
-      artista: null,
-      apareceFav: false,
-      pesquisado: '',
-      limpa: false,
-    };
-  },
-  mounted() {
-    this.apareceFav = false;
-    axios
-     .get("https://www.vagalume.com.br/news/index.js")
-     .then(response => (this.info = response.data.news));
-  },
- 
-  methods: {
-    favorito(item){
-      item = this.pesquisado;
-      if(this.favoritos.indexOf(item)===-1){
-        this.favoritos.push(item);
-      }else{
-        this.snackbar = true;
-      }
-      console.log(this.favoritos);
-     // alert(this.favoritos);
-    },
-    remofav(item){
-      this.favoritos.splice (item,1)
-    },
-    carregaPesquisa(pesquisa) {
+<div class="base">
+  <v-card
+    class="mx-auto"
+    max-width="1500"
+  >
+  <v-container fluid>
+      <v-row dense>
+        <v-col
+          v-for="card in cards"
+          :key="card.title"
+          :cols="card.flex"
+        >
+          <v-card>
+            <v-img
+              :src="card.src"
+              class="white--text align-end"
+              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+              height="200px"
+            >
+              <v-card-title v-text="card.title"></v-card-title>
+            </v-img>
 
-      if(pesquisa == null) {
-        this.apareceFav = false;
-        console.log(" this.apareceFav " +  this.apareceFav);
-        axios
-        .get("https://www.vagalume.com.br/news/index.js")
-        .then(response => (this.info = response.data.news));
-
-      }
-      else{
-       
-        axios
-        .get("https://www.vagalume.com.br/" + pesquisa +"/index.js")
-        .then(response => (this.listaartista = response.data.artist.genre));
-        this.url = "https://www.vagalume.com.br/" + pesquisa;
-        this.url_imagem = this.url + "/images/" + pesquisa + ".jpg";
-        this.artista = pesquisa;
-
-
-
-        var http = new XMLHttpRequest();
-        http.open('HEAD', this.url, false);
-        http.send();
-        if (http.status != 404)
-            this.pesquisado = pesquisa,
-            this.limpa = false,
-             this.apareceFav = true;
-      
-        else {
-          console.log("erro");  
-          this.limpa = true;
-        }
+            <v-card-actions>
+              <p v-text="card.data"></p>
+              <v-spacer></v-spacer>
+              <p v-text="card.text"></p>
+              <v-spacer></v-spacer>
+              <v-icon>mdi-heart</v-icon>
+            </v-card-actions>
             
-      }
-      
-    },
-    reset() { 
-      this.artista = "";
-    
-     this.carregaPesquisa();
-      }
-  },
-};
+
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-card>
+  </div>
+</template>
+
+<script>
+  export default {
+    data: () => ({
+      cards: [
+        { title: 'Counter-Strike: Global Offensive', src: 'https://th.bing.com/th/id/R13aa5bc8728a72a8f73b9d6eb18e8e8d?rik=JYTnoobnIU6u3Q&pid=ImgRaw', text: 'Score: Extremamente positivo', data: 'Data de lançamento: 21/08/2012' , flex: 6 },
+        { title: 'DOOM', src: 'https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_Doom_image1600w.jpg',  text: 'Score: Extremamente positivo', data: 'Data de lançamento: 13/05/2016' , flex: 6 },
+        { title: 'Assassins Creed', src: 'https://images2.alphacoders.com/602/602604.jpg', text: 'Score: Positivo', data: 'Data de lançamento: 19/12/2000' , flex: 6 },
+        { title: 'Sea Of Thieves', src: 'https://as.com/meristation/imagenes/2019/11/26/noticias/1574749817_053077_1574749898_noticia_normal.jpg', text: 'Score: Positivo', data: 'Data de lançamento: 20/03/2018' , flex: 6 },
+      ],
+    }),
+  }
 </script>
 
-<style>
-.colfav{
-  flex: 20%
+<style scoped>
+.base{
+  background-color: black;
 }
-
-
 </style>
